@@ -1,6 +1,6 @@
 {
   "name": "@whiteguru/capacitor-plugin-facebook-login",
-  "version": "0.0.1",
+  "version": "4.0.0",
   "description": "Capacitor plugin to login with Facebook",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -13,7 +13,7 @@
     "ios/Plugin/",
     "WhiteguruCapacitorPluginFacebookLogin.podspec"
   ],
-  "author": "Manuel Rodríguez",
+  "author": "Manuel Rodríguez <mrodriguez@whiteguru.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
