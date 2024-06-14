@@ -21,24 +21,6 @@ npx cap sync
 
 ### Android configuration
 
-In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
-
-```java
-import android.os.Bundle; // required for onCreate parameter
-
-public class MainActivity extends BridgeActivity {
-
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    registerPlugin(
-      com.whiteguru.capacitor.plugin.facebooklogin.FacebookLoginPlugin.class
-    );
-  }
-}
-
-```
-
 In file `android/app/src/main/AndroidManifest.xml`, add the following XML elements under `<manifest><application>` :
 
 ```xml
