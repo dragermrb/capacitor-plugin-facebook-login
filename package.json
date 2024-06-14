@@ -1,6 +1,6 @@
 {
   "name": "@whiteguru/capacitor-plugin-facebook-login",
-  "version": "6.0.0",
+  "version": "6.0.1",
   "description": "Capacitor plugin to login with Facebook",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
