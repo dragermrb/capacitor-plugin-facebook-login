@@ -5,10 +5,17 @@ Capacitor plugin to login with Facebook
 **Note**
 **This is a fork of [@capacitor-community/facebook-login](https://github.com/capacitor-community/facebook-login) with `Limited Tracking Login` method.**
 
-## Install
+## Install (Capacitor 6.x)
 
 ```bash
 npm install @whiteguru/capacitor-plugin-facebook-login
+npx cap sync
+```
+
+### or for Capacitor 5.x
+
+```bash
+npm install @whiteguru/capacitor-plugin-facebook-login@^5.0.1
 npx cap sync
 ```
 
