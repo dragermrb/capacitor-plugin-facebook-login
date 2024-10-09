@@ -21,24 +21,6 @@ npx cap sync
 
 ### Android configuration
 
-In file `android/app/src/main/java/**/**/MainActivity.java`, add the plugin to the initialization list:
-
-```java
-import android.os.Bundle; // required for onCreate parameter
-
-public class MainActivity extends BridgeActivity {
-
-  @Override
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    registerPlugin(
-      com.whiteguru.capacitor.plugin.facebooklogin.FacebookLoginPlugin.class
-    );
-  }
-}
-
-```
-
 In file `android/app/src/main/AndroidManifest.xml`, add the following XML elements under `<manifest><application>` :
 
 ```xml
@@ -258,15 +240,15 @@ console.log(`Facebook user's email is ${result.email}`);
 
 <docgen-index>
 
-- [`initialize(...)`](#initialize)
-- [`login(...)`](#login)
-- [`loginWithLimitedTracking(...)`](#loginwithlimitedtracking)
-- [`logout()`](#logout)
-- [`reauthorize()`](#reauthorize)
-- [`getCurrentAccessToken()`](#getcurrentaccesstoken)
-- [`getProfile(...)`](#getprofile)
-- [Interfaces](#interfaces)
-- [Type Aliases](#type-aliases)
+* [`initialize(...)`](#initialize)
+* [`login(...)`](#login)
+* [`loginWithLimitedTracking(...)`](#loginwithlimitedtracking)
+* [`logout()`](#logout)
+* [`reauthorize()`](#reauthorize)
+* [`getCurrentAccessToken()`](#getcurrentaccesstoken)
+* [`getProfile(...)`](#getprofile)
+* [Interfaces](#interfaces)
+* [Type Aliases](#type-aliases)
 
 </docgen-index>
 
@@ -283,7 +265,8 @@ initialize(options: Partial<FacebookConfiguration>) => Promise<void>
 | ------------- | ------------------------------------------------------------------------------------------------------------- |
 | **`options`** | <code><a href="#partial">Partial</a>&lt;<a href="#facebookconfiguration">FacebookConfiguration</a>&gt;</code> |
 
----
+--------------------
+
 
 ### login(...)
 
@@ -297,7 +280,8 @@ login(options: { permissions: string[]; }) => Promise<FacebookLoginResponse>
 
 **Returns:** <code>Promise&lt;<a href="#facebookloginresponse">FacebookLoginResponse</a>&gt;</code>
 
----
+--------------------
+
 
 ### loginWithLimitedTracking(...)
 
@@ -311,7 +295,8 @@ loginWithLimitedTracking(options: { permissions: string[]; }) => Promise<Faceboo
 
 **Returns:** <code>Promise&lt;<a href="#facebooklimitedloginresponse">FacebookLimitedLoginResponse</a>&gt;</code>
 
----
+--------------------
+
 
 ### logout()
 
@@ -319,7 +304,8 @@ loginWithLimitedTracking(options: { permissions: string[]; }) => Promise<Faceboo
 logout() => Promise<void>
 ```
 
----
+--------------------
+
 
 ### reauthorize()
 
@@ -329,7 +315,8 @@ reauthorize() => Promise<FacebookLoginResponse>
 
 **Returns:** <code>Promise&lt;<a href="#facebookloginresponse">FacebookLoginResponse</a>&gt;</code>
 
----
+--------------------
+
 
 ### getCurrentAccessToken()
 
@@ -339,7 +326,8 @@ getCurrentAccessToken() => Promise<FacebookCurrentAccessTokenResponse>
 
 **Returns:** <code>Promise&lt;<a href="#facebookcurrentaccesstokenresponse">FacebookCurrentAccessTokenResponse</a>&gt;</code>
 
----
+--------------------
+
 
 ### getProfile(...)
 
@@ -353,9 +341,11 @@ getProfile<T extends object>(options: { fields: readonly string[]; }) => Promise
 
 **Returns:** <code>Promise&lt;T&gt;</code>
 
----
+--------------------
+
 
 ### Interfaces
+
 
 #### FacebookConfiguration
 
@@ -367,6 +357,7 @@ getProfile<T extends object>(options: { fields: readonly string[]; }) => Promise
 | **`version`**          | <code>string</code>  |
 | **`locale`**           | <code>string</code>  |
 
+
 #### FacebookLoginResponse
 
 | Prop                             | Type                                                        |
@@ -374,6 +365,7 @@ getProfile<T extends object>(options: { fields: readonly string[]; }) => Promise
 | **`accessToken`**                | <code><a href="#accesstoken">AccessToken</a> \| null</code> |
 | **`recentlyGrantedPermissions`** | <code>string[]</code>                                       |
 | **`recentlyDeniedPermissions`**  | <code>string[]</code>                                       |
+
 
 #### AccessToken
 
@@ -388,11 +380,13 @@ getProfile<T extends object>(options: { fields: readonly string[]; }) => Promise
 | **`token`**               | <code>string</code>   |
 | **`userId`**              | <code>string</code>   |
 
+
 #### FacebookLimitedLoginResponse
 
 | Prop                      | Type                                                                        |
 | ------------------------- | --------------------------------------------------------------------------- |
 | **`authenticationToken`** | <code><a href="#authenticationtoken">AuthenticationToken</a> \| null</code> |
+
 
 #### AuthenticationToken
 
@@ -401,20 +395,21 @@ getProfile<T extends object>(options: { fields: readonly string[]; }) => Promise
 | **`token`**  | <code>string</code> |
 | **`userId`** | <code>string</code> |
 
+
 #### FacebookCurrentAccessTokenResponse
 
 | Prop              | Type                                                        |
 | ----------------- | ----------------------------------------------------------- |
 | **`accessToken`** | <code><a href="#accesstoken">AccessToken</a> \| null</code> |
 
+
 ### Type Aliases
+
 
 #### Partial
 
 Make all properties in T optional
 
-<code>{
-[P in keyof T]?: T[P];
-}</code>
+<code>{ [P in keyof T]?: T[P]; }</code>
 
 </docgen-api>
